@@ -41,9 +41,9 @@
 # sudo pip3 install wikipedia
 # sudo pip3 install tweepy
 # sudo pip3 install youtube_dl
-# git clone https://github.com/reysebastian/reymia
-# cd reymia
-# python rey.py
+# git clone https://github.com/0954517662/MAXs
+# cd MAXs
+# python MAXs.py
 
 # INSTALL Di TERMUX :
 # pkg update
@@ -62,24 +62,24 @@
 # pip3 install wikipedia
 # pip3 install youtube_dl
 # pip3 install tweepy
-# git clone https://github.com/reysebastian/reymia
-# cd reymia
-# python3 rey.py
+# git clone https://github.com/0954517662/MAXs
+# cd MAXs
+# python3 MAXs.py
 
 # Cara Menjalankan Bot Kembali :
 
 # Di C9 :
-# cd reymia
-# python3 rey.py
+# MAXs
+# python3 MAXs.py
 
 # Di Termux :
-# cd reymia
-# python3 rey.py
+# MAXs
+# python MAXs.py
 
 
-# EDITOR BY REY SEBASTIAN
+# SELFBOT-BY:MAX
 
-# Add My ID LINE : rey_tlangu
+# Add My ID LINE : max_pv
 
 
  
