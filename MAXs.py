@@ -10,51 +10,51 @@ from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
 #ANTIJS_V2
-#cl = LineClient()
-cl = LineClient(authToken='ExGGo9IlpjQmyIER69G2.qr5zqRaj72xYzhhusepz4G.FQumQZsmyjyyjbsUiAW5zx0uth/6rYZoxDoUKYlkF3U=')
+cl = LineClient()
+#cl = LineClient(authToken='')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
 
-#ki = LineClient()
-ki = LineClient(authToken='ExRhSF8sdRuRpkAOmTo4.+SoeyhaZWgFvNhO8hApIPa.51v16/WVNxnE0lr4P+KxTBtpaza0kKJhbVgHKXM4oXk=')
+ki = LineClient()
+#ki = LineClient(authToken='')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
 
-#kk = LineClient()
-kk = LineClient(authToken='ExkegvCI9iAhg2Bb97nc./PU0Cxthkp5tnb0K29DmVa.ZnXG91zGkXqsrRO46/rByXxB/bT1tqCE27jtTGsnJbM=')
+kk = LineClient()
+#kk = LineClient(authToken='')
 kk.log("Auth Token : " + str(kk.authToken))
 channel2 = LineChannel(kk)
 kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
 
-#kc = LineClient()
-kc = LineClient(authToken='ExOdxLVMTstrd1TCoGce.1AqixFjrwZ6VnERXRMw2FG.SjWjj01FKMZzR1qRDa84MqeU2i+HuleCczR5bBOS9HY=')
+kc = LineClient()
+#kc = LineClient(authToken='')
 kc.log("Auth Token : " + str(kc.authToken))
 channel3 = LineChannel(kc)
 kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
 
-#sw = LineClient()
-sw = LineClient(authToken='ExzXeZn6QUZt4lbcPxC0.T25R3cEZfL7+29xeX9KCya.AG73mmpk0E72jDKUtj75HtMrWwUYa2g9xbdrca5l8kQ=')
+sw = LineClient()
+#sw = LineClient(authToken='')
 sw.log("Auth Token : " + str(sw.authToken))
 channel11 = LineChannel(sw)
 sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
 
 poll = LinePoll(cl)
 call = cl
-creator = ["u411e5942b009ef65f26471d44843d9e2"]
-owner = ["u411e5942b009ef65f26471d44843d9e2"]
-admin = ["u411e5942b009ef65f26471d44843d9e2","ua12c189883d5d8443edef1efbb4b172d"]
-staff = ["u411e5942b009ef65f26471d44843d9e2"]
+creator = ["MID"]
+owner = ["MID"]
+admin = ["MID"]
+staff = ["MID"]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Zmid = sw.getProfile().mid
-KAC = [cl,ki,kk,kc]
-ABC = [ki,kk,kc]
+KAC = [cl,ki,kk,kc,sw]
+ABC = [cl,ki,kk,kc,sw]
 Bots = [mid,Amid,Bmid,Cmid,Zmid]
-Dpk = admin + staff
+Max = admin + staff
 
 protectqr = []
 protectkick = []
@@ -75,7 +75,7 @@ settings = {
     "group":{},
     "groupPicture":False,
     "changePicture":False,
-    "autoJoinTicket":False,
+    "autoJoinTicket":True,
     "userAgent": [
         "Mozilla/5.0 (X11; U; Linux i586; de; rv:5.0) Gecko/20100101 Firefox/5.0",
         "Mozilla/5.0 (X11; U; Linux amd64; rv:5.0) Gecko/20100101 Firefox/5.0 (Debian)",
@@ -133,7 +133,7 @@ wait = {
     "mention":"SINI KAK GABUNG CHAT AJA .. KALAU NGINTIP TERUS KU DO'AIN BISULAN 3 TAHUN LHO.. HEHEHE😊",
     "Respontag":"woyy.. tag mulu njir.. gua cipok beranak lu !! 😁😁😁😁😁",
     "welcome":"Selamat datang & semoga betah kakak peseg",
-    "comment":"Like like & like by REY SEBASTIAN",
+    "comment":"Like like & like by SELFBOT-BY:MAX",
     "message":"Terimakasih sudah add saya \n kalau ada perlu bisa chat \n menerima jasa buat bot .. thanks 😃",
     }
 
@@ -286,7 +286,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n⏩ Group : "+str(len(gid))+"\n⏩ Teman : "+str(len(teman))+"\n⏩ Expired : In "+hari+"\n⏩ Version : ANTIJS2\n⏩ Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n⏩ Runtime : \n • "+bot
+        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n😈 Group : "+str(len(gid))+"\n😈 Teman : "+str(len(teman))+"\n😈 Expired : In "+hari+"\n😈 Version : SELFBOT-BY:MAX\n😈 Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n😈 Runtime : \n • "+bot
         cl.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -305,7 +305,7 @@ def help():
     helpMessage = "╔═════════════════\n" +\
                   "║●●●●●●●●●●●●●●●●●\n" + \
                   "║●➢" + key + "Menu Help\n" + \
-                  "╠══════════════════\n" +\
+                  "╠═════════════════\n" +\
                   "╠➩●➢" + key + "Me\n" + \
                   "╠➩●➢"+ key + "Mid「@」\n" + \
                   "╠➩●➢" + key + "Info「@」\n" + \
@@ -391,10 +391,10 @@ def help():
                   "╠➩●➢" + key + "naga team\n" + \
                   "╠➩●➢" + key + "Listadmin\n" + \
                   "╠➩●➢" + key + "Listprotect\n" + \
-                  "╠══════════════════════\n" +\
-                  "║●●●●" + key + "SQUAD NAGA MERAH ●●●●\n" +\
-                  "║" + key + " ●● http://line.me/ti/p/~rey_tlangu ●● \n" +\
-                  "╚══════════════════════"
+                  "╠═════════════════\n" +\
+                  "║●●●●" + key + " SELFBOT-BY:MAX ●●●●\n" +\
+                  "║" + key + " ●● http://line.me/ti/p/~max_pv ●● \n" +\
+                  "╚═════════════════"
     return helpMessage
 
 def helpbot():
@@ -436,10 +436,10 @@ def helpbot():
                   "╠➩●➢" + key + "Bot3up「Kirim fotonya」\n" + \
                   "╠➩●➢" + key + "Gift:「Mid korban」「Jumlah」\n" +\
                   "╠➩●➢" + key + "Spam:「Mid korban」「Jumlah」\n" + \
-                  "╠══════════════════════════\n" +\
-                  "║●●●●" + key + "SQUAD NAGA MERAH ●●●●\n" +\
-                  "║" + key + " ●● http://line.me/ti/p/~rey_tlangu ●● \n" +\
-                  "╚══════════════════════════"
+                  "╠═════════════════\n" +\
+                  "║●●●" + key + " SELFBOT-BY:MAX ●●●\n" +\
+                  "║" + key + " ●● http://line.me/ti/p/~max_pv ●● \n" +\
+                  "╚═════════════════"
     return helpMessage1
 
 def bot(op):
@@ -1342,7 +1342,7 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "「 NAGA MERAH PŘØŤĘČŤÎØŇ」\n"
+                                md = "「 NAGA MERAH STATUS 」\n"
                                 if wait["sticker"] == True: md+="「 Sticker「ON」」\n"
                                 else: md+="「 Sticker「OFF」」\n"
                                 if wait["contact"] == True: md+="「 Contact「ON」」\n"
@@ -1377,7 +1377,7 @@ def bot(op):
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                cl.sendText(msg.to,"Naga Merah Creator") 
+                                cl.sendText(msg.to,"「 SELFBOT-BY:MAX 」") 
                                 ma = ""
                                 for i in creator:
                                     ma = cl.getContact(i)
@@ -1386,7 +1386,7 @@ def bot(op):
                         elif cmd == "about" or cmd == "informasi":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "「 Type Selfbot 」\n")
+                               sendMention(msg.to, sender, "「 SELFBOT-BY:MAX 」\n")
                                cl.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'me':
@@ -1395,8 +1395,8 @@ def bot(op):
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
                                cl.sendMessage1(msg)
-                               cl.sendMessage(msg.to,"「 SQUAD NAGA MERAH」")
-                               cl.sendMessage(msg.to,"「 SAVE YOUR GROUP」")
+                               cl.sendMessage(msg.to,"「 SELFBOT-BY:MAX 」")
+                               cl.sendMessage(msg.to,"「 SAVE YOUR GROUP 」")
 
                         elif text.lower() == "mid":
                                cl.sendMessage(msg.to, msg._from)
@@ -2015,16 +2015,16 @@ def bot(op):
                                 G = kc.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
                                 kc.updateGroup(G)
-                                ki.sendMessage(msg.to,"「 NAGA MERAH 1 DONE」")
-                                kk.sendMessage(msg.to,"「NAGA MERAH 2 DONE」")
-                                kc.sendMessage(msg.to," 「 NAGA MERAH 3 DONE」")
-                                sw.sendMessage(msg.to,"「 NAGA COMPLETE .. GHOST ANTIJS STAY」")
+                                ki.sendMessage(msg.to,"「 SELFBOT-BY:MAX 1 DONE 」")
+                                kk.sendMessage(msg.to,"「 SELFBOT-BY:MAX 2 DONE 」")
+                                kc.sendMessage(msg.to,"「 SELFBOT-BY:MAX 3 DONE 」")
+                                sw.sendMessage(msg.to,"「 SELFBOT-BY:MAX .. GHOST ANTIJS STAY 」")
 
                         elif cmd == "out":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 G = cl.getGroup(msg.to)
-                                ki.sendText(msg.to, "「SQUAD NAGA MERAH 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
+                                ki.sendText(msg.to, "「 SELFBOT-BY:MAX 1 2 3 PAMIT DULU .. MAU CARI MAKAN!! BYE 」 "+str(G.name))
                                 ki.leaveGroup(msg.to)
                                 kk.leaveGroup(msg.to)
                                 kc.leaveGroup(msg.to)
@@ -2119,14 +2119,27 @@ def bot(op):
                                 get_contact_time_start = time.time()
                                 get_contact = cl.getContact(mid)
                                 get_contact_time = time.time() - get_contact_time_start
-                                cl.sendMessage(msg.to, "●➢「 NAGA MERAH RESPON」\n\n  ●➢「 Get Profile」\n   %.10f\n ●➢「Get Contact」\n   %.10f\n ●➢「Get Group」\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
+                                cl.sendMessage(msg.to, "●➢「 SELFBOT-BY:MAX RESPON 」\n\n  ●➢「 Get Profile」\n   %.10f\n ●➢「Get Contact」\n   %.10f\n ●➢「Get Group」\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
-                        elif text.lower() == 'speed':
+                        elif cmd == "sp" or text.lower() == 'speed':
+                          if wait["selfbot"] == True:
                         	if msg._from in admin:
                                  start = time.time()
-                                 cl.sendMessage(to, "●➢ NAGA SPEED FULL..")
+                                 cl.sendMessage(to, "●➢ MAX SPEED FULL..")
                                  elapsed_time = time.time() - start
                                  cl.sendMessage(to,format(str(elapsed_time)))
+
+                        elif text.lower() == 'spb':
+                          if wait["selfbot"] == True:
+                        	if msg._from in admin:
+                                 start = time.time()
+                                 ki.sendMessage(to, "●➢ MAX SPEED FULL..")
+                                 elapsed_time = time.time() - start
+                                 ki.sendMessage(to,format(str(elapsed_time)))
+                                 elapsed_time = time.time() - start
+                                 kk.sendMessage(to,format(str(elapsed_time)))
+                                 elapsed_time = time.time() - start
+                                 kc.sendMessage(to,format(str(elapsed_time)))
 
                         elif cmd == "lurking on":
                           if wait["selfbot"] == True:
