@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import LINEPY
-from LINEPY import *
+import REYBOTS
+from REYBOTS import *
 from akad.ttypes import *
 from multiprocessing import Pool, Process
 from time import sleep
@@ -8,8 +8,8 @@ import pytz, datetime, pafy, time, timeit, random, sys, ast, re, os, json, subpr
 from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
-from urllib.parse import urlencode
-import subprocess as cmd
+from googletrans import Translator
+import youtube_dl
 #==============================================================================#
 boy = LineClient()
 #boy = LineClient(token["boy"])
